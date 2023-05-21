@@ -1,0 +1,89 @@
+[
+    {
+        "image": "/src/image/gif/porfolio-gif.gif",
+        "title":"Portfolio",
+        "link": "https://elisacodes.com/", 
+        "usedSkill":
+        [
+            "react", "vite", "sass", "javascript"
+        ], 
+        "usedTool":
+        [
+            "figma", "github"
+        ],
+        "team":["myself"], 
+        "desc": "Elisacodes portfolio was built with React due to its increasing popularity. The portfolio serves as a great introduction to React coding standards and best practices. Furthermore, a local JSON file allows for easy customization of the portfolio's content.", 
+        "designDesc": "Firstly, a content plan was created to facilitate the creation of an initial wireframe and then a high-fidelity wireframe. \n \nThen it was development time. Given the time limit, there are many things I would like to change, including cleaning up the code and adding more animation.\n \nColours were chosen based on their meanings. The main pages are green to promote growth and learning, while the contact page is blue to induce feelings of trust and loyalty.",    
+        "highlights":
+           [ 
+            {
+                "highlightImg": "/src/image/gif/responsive-gif.gif", 
+                "highlightDesc": "Responsive page between mobile and desktop"
+            },
+            {
+                "highlightImg":"/src/image/gif/home-animation-gif.gif",
+                "highlightDesc":"Animated homepage to draw attention"
+            }
+        ]
+         ,
+        "learnedDesc": "It was hard to know what I really wanted to code. I struggled with going from local JSON to a headless CMS to calling APIs. I realized it would have been much more organized if I had planned a detailed development plan outlining how I would get the information and what functions I would use. I ended up using fetch() in the end, and though I wanted to do some destructuring to make the code look cleaner, I was running out of time. I found that there were still many things I wanted to do to finalize it. Throughout the process, I took notes on what I was coding because there were so many React functions I didn't understand and didn't know why I needed them."
+     }, 
+
+     {
+        "image": "/src/image/gif/binge-watch-gif.gif",
+        "title": "BingeWatch", 
+        "link": "https://elisacodes.com/movie-db/",
+        "usedSkill":
+        [
+            "react API", "sass", "javascript"
+        ], 
+        "usedTool":
+        [
+            "figma", "github"
+        ],
+        "team":["myself", "henry"],
+        "desc": "Website is built entirely on React, and it uses the TMDB API to ensure that movie enthusiasts are always up-to-date with the latest releases and information about upcoming films.", 
+        "designDesc": "Planning this website was a step-by-step process facilitated by BCIT's program, which involved creating a low-fidelity wireframe, followed by a high-fidelity wireframe, and ultimately a prototype.", 
+        "highlights":
+        [ 
+         {
+             "highlightImg": "/src/image/gif/responsive-bingewatch-gif.gif", 
+             "highlightDesc": "Responsive page between mobile and desktop with interactive tabs"
+         },
+         {
+             "highlightImg":"/src/image/gif/favourite-bingewatch-gif.gif",
+             "highlightDesc":"Function to favourite or unfavourite movies into local storage"
+         }
+     ],
+        "learnedDesc": "Developing this website was my first experience working with React, and due to the sheer number of API calls required to gather and display the necessary data, I had to create several helper functions to streamline the process. These functions not only made it easier to call the APIs, but also led to a cleaner, more organized code structure. Overall, this project provided a great opportunity to learn and implement new techniques in web development, and I'm proud of the end result."
+     },
+     {
+        "image": "/src/image/gif/rps-gif.gif",
+        "title": "Extreme RPS", 
+        "link": "https://elisacodes.com/RPS/",
+        "usedSkill":
+        [
+           "bootstrap", "javascript"
+        ], 
+        "usedTool":
+        [
+            "figma", "github"
+        ],
+        "team":["myself"],
+        "desc": "The game is built entirely with Javascript and styled using Bootstrap, offering an interactive and visually appealing experience. Players can test their skills against the AI in a classic game of Rock Paper Scissors.", 
+        "designDesc":"This simple but engaging game was developed using Javascript, and the process began with a low-fidelity wireframe that served as the basis for the game's design. From there, I created a detailed game plan that outlined the necessary functions and objectives. In order to optimize the game's functionality and organization, I utilized object methods.", 
+        "highlights":
+        [ 
+         {
+             "highlightImg": "/src/image/gif/rps-difficulty-gif.gif", 
+             "highlightDesc": "Functionality to choose between difficulty"
+         },
+         {
+             "highlightImg":"/src/image/gif/rps-ready-gif.gif",
+             "highlightDesc":"To create a more immersive and realistic experience, an AI loading animation was implemented"
+         }
+     ],
+        "learnedDesc": "This project helped me recognize the importance of having a well thought-out game plan before diving into coding. I encountered several challenges along the way, including missing functions that were necessary to implement certain features. However, through a process of trial and error, I was able to identify the missing pieces and refine my approach. Additionally, the project provided me with a valuable opportunity to deepen my understanding of jQuery, and I feel more confident in my abilities as a developer as a result."
+     }
+    
+     ]

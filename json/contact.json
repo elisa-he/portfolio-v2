@@ -1,0 +1,15 @@
+{
+    "title": "get in touch", 
+    "contactDesc": "If you have any questions, feel free to contact me through my email at elisacodes@outlook.com", 
+    "socials":[
+        {
+            "title":"github", 
+            "link": "https://github.com/elisa-he"
+        },
+        {
+            "title":"LinkedIn", 
+            "link": "https://www.linkedin.com/in/elisa-h-5a8473208/"
+        }
+    ]
+
+}

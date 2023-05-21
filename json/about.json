@@ -1,0 +1,46 @@
+{
+   
+        "name": "Elisa", 
+        "image": [
+            {
+                "id":1, 
+                "url":"/assets/Nurse.png"
+            }, 
+            {
+                "id":2, 
+                "url":"/assets/Computer.png"
+            }
+        ],
+        "description": [
+            {
+                "id":3, 
+                "desc":"I started as a nurse, currently still a nurse. As time went by, coding has peaked by interest."
+
+            },
+              {
+                "id":4, 
+                "desc":"My journey of coding starts with BCIT Front-End Web Development Program. I was taught different computer languages, which gave me a chance to adapt to different environments."
+
+            }
+        ],
+        "hobbyList": 
+            [
+                {
+                "indoorHobby": [
+                    "Apex Legends",
+                    "League of Legends",
+                    "Co-op puzzle games",
+                    "Escape games"
+                ]},
+
+                {
+                "outdoorHobby": [
+                    "Hiking", 
+                    "Cafe-hopping", 
+                    "Try new foods (that's outdoor, right?)"
+                ]}
+            ]
+       
+     
+
+}
