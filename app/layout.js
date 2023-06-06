@@ -1,5 +1,7 @@
 import "./normalize.css";
 import "./globals.css";
+import { mulish, josefin } from "./fonts";
+import Navbar from "./components/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${mulish.variable} ${josefin.variable}`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

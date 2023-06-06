@@ -1,9 +1,10 @@
+"use client";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import logo from "public/eh.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { josefin } from "./fonts";
+import { josefin, mulish } from "./fonts";
 import about from "../json/about.json";
 import nurseImg from "public/nurse.png";
 import computerImg from "public/computer.png";
@@ -20,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Header logo={logo} />
-      <main>
+      <main className="font-mulish">
         <section className="top flex justify-center py-4 px-12">
           <div className="title">
             <p className={`text-6xl font-semibold my-16 ${josefin.className}`}>
@@ -35,15 +36,15 @@ export default function Home() {
         <section className="bottom flex justify-center text-xs flex-col items-center">
           <a
             href="#about"
-            className="learnLink text-main-color block font-light text-sm p-4"
+            className="learnLink font-mulish text-main-color block font-light text-sm p-4"
           >
             Learn More
           </a>
 
-          <div className="line h-[40rem] w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
+          <div className="line h-[60vh] w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
         </section>
-        <section className="about  ">
-          <div className="firstRow flex justify-center">
+        <section id="about">
+          <div className={"firstRow  flex justify-center"}>
             <Image
               src={nurseImg}
               className="w-1/2 max-w-xs max-h-60 object-contain "

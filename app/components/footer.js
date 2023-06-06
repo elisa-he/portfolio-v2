@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <section className="footer p-6 pb-0 flex text-xs justify-center relative items-end">
-        <p className="footer uppercase ">copyright by elisa</p>
+        <p className="footer  uppercase ">copyright by elisa</p>
         <Image
           className="arrow absolute right-2.5 bottom-2.5"
           src={arrow}

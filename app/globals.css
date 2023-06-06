@@ -18,9 +18,8 @@
   scroll-behavior: smooth;
  }
 
- body {
-  font-family: 'Mulish', sans-serif;
- }
+
+
 
 .elisa::before {
   content: attr(data-text);
