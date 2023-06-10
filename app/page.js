@@ -8,7 +8,7 @@ import { josefin, mulish } from "./fonts";
 import about from "../json/about.json";
 import nurseImg from "public/nurse.png";
 import computerImg from "public/computer.png";
-
+import { motion } from "framer-motion";
 export default function Home() {
   const indoorHobby =
     about &&
@@ -41,10 +41,32 @@ export default function Home() {
             Learn More
           </a>
 
-          <div className="line h-[60vh] w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
+          <div className="line h-[40rem] w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
         </section>
         <section id="about">
-          <div className={"firstRow  flex justify-center"}>
+          <motion.div
+            initial="hide"
+            whileInView="show"
+            exit="hide"
+            variants={{
+              hide: {
+                opacity: 0,
+                // translateX: -100,
+                transition: {
+                  duration: 1,
+                },
+              },
+              show: {
+                opacity: 1,
+                // translateX: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 1,
+                },
+              },
+            }}
+            className={"firstRow noShow flex justify-center"}
+          >
             <Image
               src={nurseImg}
               className="w-1/2 max-w-xs max-h-60 object-contain "
@@ -53,11 +75,35 @@ export default function Home() {
             <p className="firstDesc w-1/2 max-w-md p-2.5 my-auto mx-0 leading-relaxed text-sm">
               {about && about.description[0].desc}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="line line h-12 my-4 mx-auto w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
+          <div className="line h-72 my-4 mx-auto w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
 
-          <div className="secondRow flex justify-center">
+          <motion.div
+            initial="hide"
+            whileInView="show"
+            exit="hide"
+            variants={{
+              hide: {
+                opacity: 0,
+
+                // translateX: 100,
+                transition: {
+                  duration: 1,
+                },
+              },
+              show: {
+                opacity: 1,
+
+                // translateX: 0,
+                transition: {
+                  delay: 0.3,
+                  duration: 1,
+                },
+              },
+            }}
+            className="secondRow noShow flex justify-center"
+          >
             <div className="w-1/2 max-w-md">
               <p className="secondDesc p-2.5 my-auto mx-0 leading-loose text-sm">
                 {about && about.description[1].desc}
@@ -74,7 +120,7 @@ export default function Home() {
             <div className="w-1/2 h-1/2 max-w-xs object-contain my-auto mx-2.5">
               <Image src={computerImg} alt="person on computer" />
             </div>
-          </div>
+          </motion.div>
         </section>
         <section className=" hobby flex flex-wrap justify-center pt-12 max-w-sm mx-auto">
           <div className="highlight flex justify-start ml-2.5 pt-7">

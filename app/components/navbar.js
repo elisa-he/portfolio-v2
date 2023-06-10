@@ -8,13 +8,17 @@ export default function Navbar() {
     setToggleNav(!toggleNav);
     console.log("it is clicked");
   };
+
   return (
-    <div className="fixedMenu bottom-[8%] w-full ml-4 fixed">
-      <div className={`navMenu  w-96 flex`}>
+    <div className="fixedMenu top-12 w-full ml-4 fixed">
+      <div
+        className={`navMenu overflow-hidden rounded-full relative w-96 flex`}
+      >
         <button
-          onMouseEnter={handleClick}
-          onMouseLeave={handleClick}
-          className="relative  z-10 bg-main-color w-11 h-11 flex flex-col cursor-pointer justify-center items-center rounded-full"
+          onClick={handleClick}
+          className={`${
+            toggleNav ? "rotate-90 " : ""
+          } relative ease-in-out  duration-300 z-10 bg-main-color w-11 h-11 flex flex-col cursor-pointer justify-center items-center rounded-full`}
         >
           <div className="w-1.5 h-1.5 bg-black rounded-md my-0.5"></div>
           <div className="w-1.5 h-1.5 bg-black rounded-md my-0.5"></div>
@@ -24,9 +28,9 @@ export default function Navbar() {
         <nav
           className={` ${
             toggleNav
-              ? "visible ease-in-out left-0 duration-300"
-              : "invisible duration-200"
-          } navLink left-[-100px] z-0 w-80 bg-main-color flex rounded-full h-11 justify-around absolute items-center`}
+              ? "visible opacity-100 delayOpacity left-1 duration-300"
+              : "invisible opacity-0 left-[-300px] duration-300"
+          } navLink w-80 z-0 ease-in-out bg-main-color flex rounded-full h-11 justify-around absolute items-center`}
         >
           <ul className="navList flex font-bold font-josefin">
             <li>

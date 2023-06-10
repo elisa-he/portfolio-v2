@@ -16,6 +16,7 @@
 
  html {
   scroll-behavior: smooth;
+  
  }
 
 
@@ -36,6 +37,7 @@
 }
 
 
+
 @keyframes animate {
   0% {
       width: 0;
@@ -45,3 +47,5 @@
       width: 100%; 
   }
 }
+
+

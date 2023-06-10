@@ -11,7 +11,7 @@ export default function Footer() {
       <section className="footer p-6 pb-0 flex text-xs justify-center relative items-end">
         <p className="footer  uppercase ">copyright by elisa</p>
         <Image
-          className="arrow absolute right-2.5 bottom-2.5"
+          className="arrow animate-pulse cursor-pointer absolute right-2.5 bottom-2.5"
           src={arrow}
           alt="arrow vector"
           onClick={scrollUp}
