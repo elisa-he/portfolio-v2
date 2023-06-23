@@ -1,11 +1,11 @@
 [
     {
-        "image": "/src/image/gif/porfolio-gif.gif",
+        "image": "/capstone.gif",
         "title":"Portfolio",
         "link": "https://elisacodes.com/", 
         "usedSkill":
         [
-            "react", "vite", "sass", "javascript"
+            "next.js", "tailwind", "javascript"
         ], 
         "usedTool":
         [
@@ -17,11 +17,11 @@
         "highlights":
            [ 
             {
-                "highlightImg": "/src/image/gif/responsive-gif.gif", 
+                "highlightImg": "public/capstone-portfolio.png", 
                 "highlightDesc": "Responsive page between mobile and desktop"
             },
             {
-                "highlightImg":"/src/image/gif/home-animation-gif.gif",
+                "highlightImg":"public/capstone-portfolio.png",
                 "highlightDesc":"Animated homepage to draw attention"
             }
         ]
@@ -30,7 +30,7 @@
      }, 
 
      {
-        "image": "/src/image/gif/binge-watch-gif.gif",
+        "image": "/capstone-portfolio.png",
         "title": "BingeWatch", 
         "link": "https://elisacodes.com/movie-db/",
         "usedSkill":
@@ -47,18 +47,18 @@
         "highlights":
         [ 
          {
-             "highlightImg": "/src/image/gif/responsive-bingewatch-gif.gif", 
+             "highlightImg": "public/capstone-portfolio.png", 
              "highlightDesc": "Responsive page between mobile and desktop with interactive tabs"
          },
          {
-             "highlightImg":"/src/image/gif/favourite-bingewatch-gif.gif",
+             "highlightImg":"public/capstone-portfolio.png",
              "highlightDesc":"Function to favourite or unfavourite movies into local storage"
          }
      ],
         "learnedDesc": "Developing this website was my first experience working with React, and due to the sheer number of API calls required to gather and display the necessary data, I had to create several helper functions to streamline the process. These functions not only made it easier to call the APIs, but also led to a cleaner, more organized code structure. Overall, this project provided a great opportunity to learn and implement new techniques in web development, and I'm proud of the end result."
      },
      {
-        "image": "/src/image/gif/rps-gif.gif",
+        "image": "/capstone-portfolio.png",
         "title": "Extreme RPS", 
         "link": "https://elisacodes.com/RPS/",
         "usedSkill":
@@ -75,11 +75,11 @@
         "highlights":
         [ 
          {
-             "highlightImg": "/src/image/gif/rps-difficulty-gif.gif", 
+             "highlightImg": "public/capstone-portfolio.png", 
              "highlightDesc": "Functionality to choose between difficulty"
          },
          {
-             "highlightImg":"/src/image/gif/rps-ready-gif.gif",
+             "highlightImg":"public/capstone-portfolio.png",
              "highlightDesc":"To create a more immersive and realistic experience, an AI loading animation was implemented"
          }
      ],
