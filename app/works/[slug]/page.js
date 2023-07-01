@@ -53,20 +53,26 @@ export default function Page({ params }) {
   return (
     <>
       <Header logo={logo} />
-      <section id="single">
-        <div className="portfolioContent">
-          <div className="highlight">
-            <h2 className=" uppercase green">{title}</h2>
+      <section id="single" className="mb-8">
+        <div className="portfolioContent flex flex-wrap flex-col p-4 max-w-[26.875rem] my-0 mx-auto">
+          <div className="highlight flex justify-start my-8 ml-2.5 pt-7">
+            <h2 className=" text-2xl font-josefin font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0">
+              {title}
+            </h2>
           </div>
           <img className="workImg" src={image} alt="image of website" />
           <div className="workTop">
             <div className="workLeft">
               <p className="subtitle uppercase">used skills</p>
-              <ul>{skills}</ul>
+              <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
+                {skills}
+              </ul>
             </div>
             <div className="workRight">
               <p className="subtitle uppercase">used tools</p>
-              <ul>{tools}</ul>
+              <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
+                {tools}
+              </ul>
             </div>
           </div>
 
