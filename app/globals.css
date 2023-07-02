@@ -41,6 +41,14 @@
   border-right: solid 1px black;
 }
 
+.portfolioContent li:first-child {
+  padding-left: 0;
+ }
+ 
+ .portfolioContent li:not(:last-child) {
+     border-right: 1px solid black;
+    
+ }
 
 
 .elisa::before {

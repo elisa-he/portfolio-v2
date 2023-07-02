@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 export default function Page({ params }) {
-  const workId = params.slug;
+  const workId = decodeURIComponent(params.slug);
 
   // from the array of objects, find the object key title value the same as the slug, then declare variables as per object gotten.
 
@@ -17,18 +17,31 @@ export default function Page({ params }) {
 
   const skills =
     works?.length &&
-    works[work]?.usedSkill.map((skill, i) => <li key={i}>{skill}</li>);
+    works[work]?.usedSkill.map((skill, i) => (
+      <li className="text-xs py-0 px-1 capitalize" key={i}>
+        {skill}
+      </li>
+    ));
 
   const tools =
     works?.length &&
-    works[work]?.usedTool.map((tool, i) => <li key={i}>{tool}</li>);
+    works[work]?.usedTool.map((tool, i) => (
+      <li className="text-xs py-0 px-1 capitalize" key={i + 2}>
+        {tool}
+      </li>
+    ));
 
   const image = works?.length && works[work]?.image;
 
   const link = works?.length && works[work].link;
 
   const team =
-    works?.length && works[work]?.team.map((t, i) => <li key={i}>{t}</li>);
+    works?.length &&
+    works[work]?.team.map((t, i) => (
+      <li className="text-xs py-0 px-1 capitalize" key={i + 1}>
+        {t}
+      </li>
+    ));
 
   const projectDesc = works?.length && works[work]?.desc;
 
@@ -53,7 +66,7 @@ export default function Page({ params }) {
   return (
     <>
       <Header logo={logo} />
-      <section id="single" className="mb-8">
+      <section id="single" className="mb-8 font-mulish">
         <div className="portfolioContent flex flex-wrap flex-col p-4 max-w-[26.875rem] my-0 mx-auto">
           <div className="highlight flex justify-start my-8 ml-2.5 pt-7">
             <h2 className=" text-2xl font-josefin font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0">
@@ -61,71 +74,112 @@ export default function Page({ params }) {
             </h2>
           </div>
           <img className="workImg" src={image} alt="image of website" />
-          <div className="workTop">
+          <div className="workTop flex flex-wrap justify-between py-1.5 px-0">
             <div className="workLeft">
-              <p className="subtitle uppercase">used skills</p>
+              <p className="subtitle  uppercase underline m-0 font-semibold text-xs">
+                used skills
+              </p>
               <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
                 {skills}
               </ul>
             </div>
             <div className="workRight">
-              <p className="subtitle uppercase">used tools</p>
+              <p className="subtitle uppercase underline m-0 font-semibold text-xs">
+                used tools
+              </p>
               <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
                 {tools}
               </ul>
             </div>
           </div>
 
-          <p className="subtitle uppercase">team</p>
+          <p className="subtitle uppercase underline m-0 font-semibold text-xs">
+            team
+          </p>
           <ul>{team}</ul>
-          <p className="workDesc">{projectDesc}</p>
-          <Link href={link} className="btn black-outline ">
-            <button className="uppercase">live site</button>
+          <p className="workDesc py-4 leading-8">{projectDesc}</p>
+          <Link
+            href={link}
+            className="btn black-outline black-outline hover:bg-black hover:text-white my-1 mx-auto "
+          >
+            <button className="uppercase flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
+              live site
+            </button>
           </Link>
 
           <section>
-            <div className="tabs">
-              <div className="tab 1" onClick={() => handleClick(1)}>
-                <h3 key={1}>planning</h3>
+            <div className="tabs font-mulish">
+              <div
+                className="tab flex justify-between cursor-pointer my-9 mx-0 capitalize border-solid border-b border-black 1 pb-1.5"
+                onClick={() => handleClick(1)}
+              >
+                <h3 className="font-semibold  text-xl m-0" key={1}>
+                  planning
+                </h3>
                 <div>{isActive === 1 ? "-" : "+"}</div>
               </div>
-              {isActive === 1 && <p className="desc">{designDesc}</p>}
-              <div className="tab 2" onClick={() => handleClick(2)}>
-                <h3 key={2}>highlights</h3>
+              {isActive === 1 && (
+                <p className="desc pb-4 whitespace-pre-line align-bottom leading-8">
+                  {designDesc}
+                </p>
+              )}
+              <div
+                className="tab flex justify-between cursor-pointer my-9 mx-0 capitalize border-solid border-b border-black 1 pb-1.5 2"
+                onClick={() => handleClick(2)}
+              >
+                <h3 className="font-semibold  text-xl m-0" key={2}>
+                  highlights
+                </h3>
                 <div>{isActive === 2 ? "-" : "+"}</div>
               </div>
               {isActive === 2 && (
-                <div className="desc">
+                <div className="desc flex flex-wrap items-center flex-col  whitespace-pre-line align-bottom py-8 px-0">
                   {works?.length &&
                     works[work]?.highlights?.map((h) => {
                       return (
-                        <div className="highlightWrap">
+                        <div className="highlightWrap flex flex-wrap justify-center">
                           <img
-                            className="highlightImg"
+                            className="highlightImg w-80 h-auto"
                             src={h.highlightImg}
                             alt=""
                           />
-                          <p className="highlightDesc">{h.highlightDesc}</p>
+                          <p className="highlightDesc pb-4 leading-8 font-bold">
+                            {h.highlightDesc}
+                          </p>
                         </div>
                       );
                     })}
                 </div>
               )}
-              <div className="tab 3" onClick={() => handleClick(3)}>
-                <h3 key={3}>what i learned</h3>
+              <div
+                className="tab flex justify-between cursor-pointer my-9 mx-0 capitalize border-solid border-b border-black 1 pb-1.5 3"
+                onClick={() => handleClick(3)}
+              >
+                <h3 className="font-semibold  text-xl m-0" key={3}>
+                  what i learned
+                </h3>
                 <div>{isActive === 3 ? "-" : "+"}</div>
               </div>
 
-              {isActive === 3 && <p className="desc">{learnedDesc}</p>}
+              {isActive === 3 && (
+                <p className="desc pb-4 leading-8">{learnedDesc}</p>
+              )}
             </div>
           </section>
 
-          <div className="singleBtn">
-            <Link href={`/work`} className="btnGreen ">
-              <button className="uppercase"> check out more projects</button>
+          <div className="singleBtn flex flex-wrap">
+            <Link href={`/works`} className="btnGreen my-1 mx-auto  ">
+              <button className="uppercase flex bg-main-color border-0 cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
+                check out more projects
+              </button>
             </Link>
-            <Link href={`/contact`} className="btn black-outline ">
-              <button className="uppercase">get in touch</button>
+            <Link
+              href={`/contact`}
+              className="btn black-outline hover:bg-black hover:text-white my-1 mx-auto  "
+            >
+              <button className="uppercase flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
+                get in touch
+              </button>
             </Link>
           </div>
         </div>
