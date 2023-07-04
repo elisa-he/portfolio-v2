@@ -1,6 +1,6 @@
 [
     {
-        "image": "/capstone-main.gif",
+        "image": "/portfolio.gif",
         "title":"Portfolio",
         "link": "https://elisacodes.com/", 
         "usedSkill":
@@ -12,21 +12,21 @@
             "figma", "github"
         ],
         "team":["myself"], 
-        "desc": "Elisacodes portfolio was built with React due to its increasing popularity. The portfolio serves as a great introduction to React coding standards and best practices. Furthermore, a local JSON file allows for easy customization of the portfolio's content.", 
+        "desc": "Elisacodes portfolio was built with Next.js due to its increasing popularity. The portfolio serves as a great introduction to React coding standards and best practices. Furthermore, a local JSON file allows for easy customization of the portfolio's content.", 
         "designDesc": "Firstly, a content plan was created to facilitate the creation of an initial wireframe and then a high-fidelity wireframe. \n \nThen it was development time. Given the time limit, there are many things I would like to change, including cleaning up the code and adding more animation.\n \nColours were chosen based on their meanings. The main pages are green to promote growth and learning, while the contact page is blue to induce feelings of trust and loyalty.",    
         "highlights":
            [ 
             {
-                "highlightImg": "/capstone-main.gif", 
+                "highlightImg": "/portfolio-responsive.gif", 
                 "highlightDesc": "Responsive page between mobile and desktop"
             },
             {
-                "highlightImg":"/capstone-main.gif",
+                "highlightImg":"/portfolio.gif",
                 "highlightDesc":"Animated homepage to draw attention"
             }
         ]
          ,
-        "learnedDesc": "It was hard to know what I really wanted to code. I struggled with going from local JSON to a headless CMS to calling APIs. I realized it would have been much more organized if I had planned a detailed development plan outlining how I would get the information and what functions I would use. I ended up using fetch() in the end, and though I wanted to do some destructuring to make the code look cleaner, I was running out of time. I found that there were still many things I wanted to do to finalize it. Throughout the process, I took notes on what I was coding because there were so many React functions I didn't understand and didn't know why I needed them."
+        "learnedDesc": "It was challenging to determine what I truly wanted to code. I encountered difficulties transitioning from working with local JSON to utilizing a headless CMS and calling APIs. I realized that a detailed development plan, outlining the information retrieval process and the functions to be used, would have greatly enhanced organization. As I continued working on the project, I made a conscious effort to take notes on the React functions I encountered, as there were many that I didn't fully comprehend or understand their purpose. Moreover, this was my first experience with Next.js, and I discovered that Next.js has its own versions of various React packages. Additionally, coding with Tailwind CSS for the first time proved challenging, as it required careful organization due to its nature of code placement. Nonetheless, I acknowledge its growing popularity owing to its ability to facilitate quicker coding. However, a solid understanding of CSS is necessary to fully utilize Tailwind CSS."
      }, 
 
      {
