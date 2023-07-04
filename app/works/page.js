@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { josefin, mulish } from "../fonts";
-import logo from "public/eh.svg";
+import logo from "/public/eh.svg";
 import Image from "next/image";
 import Link from "next/link";
 

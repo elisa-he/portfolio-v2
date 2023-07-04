@@ -1,13 +1,13 @@
 "use client";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import logo from "public/eh.svg";
+import logo from "/public/eh.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { josefin, mulish } from "./fonts";
 import about from "../json/about.json";
-import nurseImg from "public/nurse.png";
-import computerImg from "public/computer.png";
+import nurseImg from "/public/nurse.png";
+import computerImg from "/public/computer.png";
 import { motion } from "framer-motion";
 export default function Home() {
   const indoorHobby =

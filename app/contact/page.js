@@ -3,10 +3,10 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { josefin, mulish } from "../fonts";
 import Link from "next/link";
-import logo from "public/ehBlue.svg";
-import github from "public/github.svg";
-import linkedin from "public/linkedin.svg";
-import portrait from "public/portrait.jpg";
+import logo from "/public/ehBlue.svg";
+import github from "/public/github.svg";
+import linkedin from "/public/linkedin.svg";
+import portrait from "/public/portrait.jpg";
 import contact from "/json/contact.json";
 import Image from "next/image";
 

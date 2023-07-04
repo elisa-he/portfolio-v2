@@ -1,5 +1,5 @@
 "use client";
-import logo from "public/eh.svg";
+import logo from "/public/eh.svg";
 import works from "/json/work.json";
 import Header from "/app/components/header";
 import Footer from "/app/components/footer";
