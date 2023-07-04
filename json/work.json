@@ -61,7 +61,7 @@
      {
         "image": "/bingewatch.gif",
         "title": "BingeWatch", 
-        "link": "https://elisacodes.com/movie-db/",
+        "link": "https://moviedb.elisacodes.com/",
         "usedSkill":
         [
             "react API", "sass", "javascript"

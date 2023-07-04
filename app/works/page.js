@@ -27,7 +27,7 @@ export default function Works() {
 
       <main
         id="work"
-        className="tablet:h-[85vh] h-[75vh] tablet:flex tablet:flex-col tablet:justify-center"
+        className="tablet:h-[80vh] h-[75vh] tablet:flex tablet:flex-col tablet:justify-center"
       >
         <div className="highlight flex justify-center tablet:m-0 mt-12 tablet:pb-8 pt-7">
           <h2
