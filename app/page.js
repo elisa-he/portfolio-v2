@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <main className="font-mulish ">
-        <div className="container snap-mandatory snap-y h-screen w-screen overflow-auto ">
+        <div className="container max-w-full snap-mandatory snap-y h-screen w-screen overflow-auto ">
           <section className="  snap-start">
             <Header logo={logo} />
             <div className="title flex justify-center  pt-16 px-12">
@@ -44,7 +44,7 @@ export default function Home() {
                 Web Developer
               </a>
 
-              <div className="line h-[30vh]  w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
+              <div className="line h-[40vh] tablet:h-[60vh]  w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div>
             </div>
           </section>
 
@@ -53,34 +53,34 @@ export default function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 1 } }}
               exit={{ opacity: 0, transition: { duration: 1 } }}
-              className={"firstRow opacity-0 noShow flex justify-center"}
+              className={
+                "firstRow opacity-0 noShow flex justify-center tablet:mt-80"
+              }
             >
               <Image
                 src={nurseImg}
                 className="w-1/2 max-w-xs max-h-60 object-contain "
                 alt="picture of a nurse"
               />
-              <p className="firstDesc w-1/2 max-w-md p-2.5 my-auto mx-0 leading-relaxed text-xs">
+              <p className="firstDesc w-1/2 max-w-md p-2.5 my-auto mx-0 leading-relaxed tablet:text-xl text-xs">
                 {about && about.description[0].desc}
               </p>
             </motion.div>
-
-            {/* <div className="line h-72 my-4 mx-auto w-0 bg-main-color border border-solid border-main-color rounded-md opacity-30"></div> */}
 
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 1 } }}
               exit={{ opacity: 0, transition: { duration: 1 } }}
-              className="secondRow noShow flex justify-center mt-8"
+              className="secondRow noShow flex justify-center tablet:mt-32 mt-8 tablet:mb-80"
             >
-              <div className="w-1/2 mb-20 max-w-md">
-                <p className="secondDesc p-2.5 my-auto mx-0 leading-relaxed text-xs">
+              <div className="w-1/2  mb-20 max-w-md">
+                <p className="secondDesc p-2.5 my-auto mx-0 leading-relaxed tablet:text-xl text-xs">
                   {about && about.description[1].desc}
                 </p>
                 <div className={`${josefin.className}`}>
                   <Link
                     href={`/work`}
-                    className="workBtn text-sm mx-2.5 capitalize max-w-xs font-bold bg-black py-2 px-1 mt-2 text-white rounded-lg text-center w-full block"
+                    className="workBtn tablet:text-xl text-sm mx-2.5 capitalize max-w-xs font-bold bg-black py-2 px-1 mt-2 text-white rounded-lg text-center w-full block"
                   >
                     My Work
                   </Link>
@@ -97,23 +97,27 @@ export default function Home() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 1 } }}
               exit={{ opacity: 0, transition: { duration: 1 } }}
-              className="mt-20 hobby flex flex-wrap justify-center py-12 mb-36 max-w-sm mx-auto"
+              className="mt-20 tablet:mb-80 hobby flex flex-wrap justify-center py-12 mb-36 tablet:max-w-4xl max-w-sm mx-auto"
             >
               <div className="highlight flex justify-start my-8 ml-2.5 pt-7">
                 <h2
-                  className={`${josefin.className} text-2xl font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0`}
+                  className={`${josefin.className} tablet:text-3xl text-2xl font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0`}
                 >
                   What I Like To Do
                 </h2>
               </div>
-              <div className="contentWrap px-12 text-xs  py-4 leading-loose text-sm">
+              <div className="contentWrap px-12 tablet:text-xl text-xs  py-4 leading-loose ">
                 <p>
                   On my free time, I like to play games when I'm in the
                   indoor-sy mood:
                 </p>
-                <ul className="list-disc ml-10 ">{indoorHobby}</ul>
-                <p className="mt-4">In my outdoor-sy mood, I like to:</p>
-                <ul className="list-disc ml-10">{outdoorHobby}</ul>
+                <ul className="list-disc ml-10">{indoorHobby}</ul>
+                <p className="mt-4 tablet:mt-16 leading-loose">
+                  In my outdoor-sy mood, I like to:
+                </p>
+                <ul className="list-disc ml-10 leading-loose">
+                  {outdoorHobby}
+                </ul>
               </div>
             </motion.div>
             <Footer />

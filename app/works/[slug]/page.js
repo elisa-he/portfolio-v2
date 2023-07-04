@@ -9,8 +9,6 @@ import { useState } from "react";
 export default function Page({ params }) {
   const workId = decodeURIComponent(params.slug);
 
-  // from the array of objects, find the object key title value the same as the slug, then declare variables as per object gotten.
-
   const work = works.findIndex((obj) => obj.title == workId);
 
   const title = works?.length && works[work]?.title;
@@ -18,7 +16,7 @@ export default function Page({ params }) {
   const skills =
     works?.length &&
     works[work]?.usedSkill.map((skill, i) => (
-      <li className="text-xs py-0 px-1 capitalize" key={i}>
+      <li className="tablet:text-base text-xs py-0 px-1 capitalize" key={i}>
         {skill}
       </li>
     ));
@@ -26,7 +24,7 @@ export default function Page({ params }) {
   const tools =
     works?.length &&
     works[work]?.usedTool.map((tool, i) => (
-      <li className="text-xs py-0 px-1 capitalize" key={i + 2}>
+      <li className="tablet:text-base text-xs py-0 px-1 capitalize" key={i + 2}>
         {tool}
       </li>
     ));
@@ -38,7 +36,7 @@ export default function Page({ params }) {
   const team =
     works?.length &&
     works[work]?.team.map((t, i) => (
-      <li className="text-xs py-0 px-1 capitalize" key={i + 1}>
+      <li className="tablet:text-base text-xs py-0 px-1 capitalize" key={i + 1}>
         {t}
       </li>
     ));
@@ -46,11 +44,7 @@ export default function Page({ params }) {
   const projectDesc = works?.length && works[work]?.desc;
 
   const designDesc = works?.length && works[work]?.designDesc;
-  // const highlightDesc =
-  //   works?.length &&
-  //   works[work]?.highlights.map((h, i) => {
-  //     <p>{h.highlightDesc}</p>;
-  //   });
+
   const learnedDesc = works?.length && works[work]?.learnedDesc;
 
   const [isActive, setIsActive] = useState(0);
@@ -67,42 +61,43 @@ export default function Page({ params }) {
     <>
       <Header logo={logo} />
       <section id="single" className="mb-8 font-mulish">
-        <div className="portfolioContent flex flex-wrap flex-col p-4 max-w-[26.875rem] my-0 mx-auto">
+        <div className="portfolioContent flex flex-wrap flex-col p-4 max-w-[50rem] my-0 mx-auto">
           <div className="highlight flex justify-start my-8 ml-2.5 pt-7">
-            <h2 className=" text-2xl font-josefin font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0">
+            <h2 className=" tablet:text-4xl text-2xl font-josefin font-semibold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0">
               {title}
             </h2>
           </div>
           <img className="workImg" src={image} alt="image of website" />
-          <div className="workTop flex flex-wrap justify-between py-1.5 px-0">
-            <div className="workLeft">
-              <p className="subtitle  uppercase underline m-0 font-semibold text-xs">
+          <div className="workTop  flex flex-wrap justify-between py-4 px-0">
+            <div className="workLeft ">
+              <p className="subtitle tablet:text-base  uppercase underline m-0 font-semibold text-xs">
                 used skills
               </p>
-              <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
+              <ul className=" flex p-0 my-[0.3rem] mx-0 items-center">
                 {skills}
               </ul>
             </div>
             <div className="workRight">
-              <p className="subtitle uppercase underline m-0 font-semibold text-xs">
+              <p className="subtitle tablet:text-base uppercase underline m-0 font-semibold text-xs">
                 used tools
               </p>
-              <ul className="flex p-0 my-[0.3rem] mx-0 items-center">
+              <ul className=" flex p-0 my-[0.3rem] mx-0 items-center">
                 {tools}
               </ul>
             </div>
           </div>
 
-          <p className="subtitle uppercase underline m-0 font-semibold text-xs">
+          <p className="subtitle tablet:text-base uppercase underline m-0 font-semibold text-xs">
             team
           </p>
-          <ul>{team}</ul>
+          <ul className=" flex p-0 my-[0.3rem] mx-0 items-center">{team}</ul>
           <p className="workDesc py-4 leading-8">{projectDesc}</p>
           <Link
             href={link}
-            className="btn black-outline black-outline hover:bg-black hover:text-white my-1 mx-auto "
+            target="_blank"
+            className="btn black-outline black-outline  my-1 mx-auto "
           >
-            <button className="uppercase flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
+            <button className="uppercase hover:duration-500  hover:bg-black hover:text-white flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
               live site
             </button>
           </Link>
@@ -133,17 +128,19 @@ export default function Page({ params }) {
                 <div>{isActive === 2 ? "-" : "+"}</div>
               </div>
               {isActive === 2 && (
-                <div className="desc flex flex-wrap items-center flex-col  whitespace-pre-line align-bottom py-8 px-0">
+                <div className="desc relative flex flex-wrap items-center flex-col  tablet:flex-row whitespace-pre-line align-bottom py-8 px-12">
                   {works?.length &&
                     works[work]?.highlights?.map((h) => {
                       return (
-                        <div className="highlightWrap flex flex-wrap justify-center">
-                          <img
+                        <div className="highlightWrap tablet:max-w-2xl tablet:flex-nowrap flex flex-wrap pb-12 items-center justify-center">
+                          <Image
                             className="highlightImg w-80 h-auto"
+                            width={350}
+                            height={400}
                             src={h.highlightImg}
                             alt=""
                           />
-                          <p className="highlightDesc pb-4 leading-8 font-bold">
+                          <p className="highlightDesc tablet:pl-8 pb-4 leading-8  font-bold">
                             {h.highlightDesc}
                           </p>
                         </div>
@@ -162,7 +159,9 @@ export default function Page({ params }) {
               </div>
 
               {isActive === 3 && (
-                <p className="desc pb-4 leading-8">{learnedDesc}</p>
+                <p className="desc whitespace-pre-line pb-4 leading-8">
+                  {learnedDesc}
+                </p>
               )}
             </div>
           </section>
@@ -175,9 +174,9 @@ export default function Page({ params }) {
             </Link>
             <Link
               href={`/contact`}
-              className="btn black-outline hover:bg-black hover:text-white my-1 mx-auto  "
+              className="btn black-outline my-1 mx-auto  "
             >
-              <button className="uppercase flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
+              <button className="uppercase hover:duration-500   hover:bg-black hover:text-white flex bg-white border-2 border-solid border-black cursor-pointer font-semibold text-black text-sm h-12 w-72 rounded-xl font-josefin items-center justify-center">
                 get in touch
               </button>
             </Link>

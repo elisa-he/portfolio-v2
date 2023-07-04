@@ -14,34 +14,56 @@ export default function Contact() {
   return (
     <>
       <Header logo={logo} />
-      <main className="flex flex-col justify-between h-[90vh] ">
-        <section className="flex flex-col pt-12 mx-auto " id="contact">
-          <div className="leftWrap mx-auto  h-[201px] w-[201px]">
+      <main className="flex flex-col  justify-between tablet:h-[90vh] h-[90vh] ">
+        <section
+          className="flex tablet:flex-row tablet:flex-wrap flex-col tablet:my-auto tablet:max-w-full tablet:justify-center  pt-12 mx-auto "
+          id="contact"
+        >
+          <div className="leftWrap mx-auto tablet:mx-16 max-h-[300px] max-w-[300px]">
             <Image
               className="rounded-full"
               src={portrait}
               alt="portrait of me"
             />
           </div>
-          <div className=" p-8  rightWrap">
-            <div className="highlight flex justify-center ml-2.5 pt-7">
+          <div className=" p-8 tablet:p-4  rightWrap">
+            <div className="highlight flex tablet:justify-start justify-center tablet:ml-0 ml-2.5  pt-7">
               <h2
-                className={`${josefin.className} text-3xl font-bold uppercase bg-gradient-to-b from-transparent from-50% to-second-color to-50% text-center px-2.5 m-0`}
+                className={`${josefin.className}  tablet:text-4xl text-3xl font-bold uppercase bg-gradient-to-b from-transparent from-50% to-second-color to-50% tablet:text-left text-center tablet:p-0 px-2.5 m-0`}
               >
                 Get in touch
               </h2>
             </div>
-            <p className="text-center p-6 ">
+            <p className="text-center tablet:text-2xl tablet:text-left tablet:w-[500px] tablet:pl-0 p-6 ">
               If you have any questions, feel free to contact me through my
               email at elisacodes@outlook.com
             </p>
-            <div className="contactIcons flex justify-between w-28 mx-auto ">
-              <Link href={contact && contact.socials[0]?.link} target="_blank">
-                <Image src={github} alt="github icon" />
-              </Link>
-              <Link href={contact && contact.socials[1]?.link} target="_blank">
-                <Image src={linkedin} alt="linkedin icon" />
-              </Link>
+            <div className="contactIcons flex justify-between w-28 tablet:mx-0 mx-auto ">
+              <div className="pr-4">
+                <Link
+                  href={contact && contact.socials[0]?.link}
+                  className=""
+                  target="_blank"
+                >
+                  <Image
+                    src={github}
+                    className="tablet:w-24"
+                    alt="github icon"
+                  />
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href={contact && contact.socials[1]?.link}
+                  target="_blank"
+                >
+                  <Image
+                    src={linkedin}
+                    className="tablet:w-24 "
+                    alt="linkedin icon"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </section>

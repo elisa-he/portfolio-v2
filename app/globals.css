@@ -16,6 +16,7 @@
 
  html {
   scroll-behavior: smooth;
+  
  
   
  }
@@ -37,7 +38,11 @@
 }
 
 
-.skill:not(:last-child) {
+#single.skill:not(:last-child) {
+  border-right: solid 1px black;
+}
+
+.work.skill:not(:last-child) {
   border-right: solid 1px black;
 }
 

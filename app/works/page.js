@@ -10,10 +10,6 @@ import Link from "next/link";
 //import JSON
 import works from "/json/work.json";
 
-// Images
-import capstone from "public/capstone.gif";
-import bingewatch from "public/bingewatch.gif";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -25,14 +21,17 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 export default function Works() {
-  const [hover, setHover] = useState("brightness-50");
   return (
     <div>
       <Header logo={logo} />
-      <main className="h-[75vh]">
-        <div className="highlight flex justify-center  mt-12 pt-7">
+
+      <main
+        id="work"
+        className="tablet:h-[85vh] h-[75vh] tablet:flex tablet:flex-col tablet:justify-center"
+      >
+        <div className="highlight flex justify-center tablet:m-0 mt-12 tablet:pb-8 pt-7">
           <h2
-            className={`${josefin.className} text-3xl font-bold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0`}
+            className={`${josefin.className} tablet:text-4xl text-3xl font-bold uppercase bg-gradient-to-b from-transparent from-50% to-main-color to-50% text-center px-2.5 m-0`}
           >
             Works
           </h2>
@@ -64,36 +63,38 @@ export default function Works() {
           }}
           pagination={true}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper mt-8 mb-8 "
+          className="mySwiper w-9/12 mt-8 mb-8 "
         >
           {works &&
             works.map((work, i) => {
               return (
-                <div key={i + 1} className="">
-                  <SwiperSlide key={work.title}>
-                    <div className="">
-                      <Link href={`works/${work?.title}`} className="relative">
-                        <Image
-                          className={`w-full object-left-top object-cover h-[313px] ${hover} transition ease-in-out duration-300`}
-                          src={work?.image}
-                          width={500}
-                          height={500}
-                          alt="capstone homepage"
-                        />
-                        <div className="flex pt-4 justify-between">
-                          <h3 className=" font-josefin text-md uppercase text-black pl-1 ">
+                <div key={i + 50} className="">
+                  <SwiperSlide key={work.title} className="">
+                    <div className="h-[280px] relative  px-2">
+                      <Link href={`works/${work?.title}`}>
+                        <div className="mb-8 h-[280px] relative">
+                          <Image
+                            className={`w-full object-left-top object-cover brightness-50 `}
+                            src={work?.image}
+                            fill
+                            alt="capstone homepage"
+                          />
+                        </div>
+                        <div className=" absolute bg-gray-50 py-8  w-full bottom-0 text-black ">
+                          <h3 className=" font-josefin text-lg uppercase  pl-1  ">
                             {work.title}
                           </h3>
-                          <ul className="flex items-center">
+
+                          {/* <ul className="flex items-center">
                             {work?.usedSkill.slice(0, 3).map((skill, i) => (
                               <li
                                 key={i}
-                                className="skill font-josefin text-sm capitalize px-1"
+                                className="work skill font-josefin text-md capitalize px-1"
                               >
                                 {skill}
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </div>
                       </Link>
                     </div>
@@ -101,44 +102,9 @@ export default function Works() {
                 </div>
               );
             })}
-          {/* <SwiperSlide className="w-full">
-            <Link href={`works/${works[1]?.title}`}>
-              <Image
-                className="w-full object-left-top object-cover h-[313px]"
-                src={capstone}
-                alt="capstone homepage"
-              />
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Link href={`works/${works[1]?.title}`}>
-              <Image
-                className="w-full object-left-top object-cover h-[313px]"
-                src={bingewatch}
-                alt="movie homepage"
-              />
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Link href={`works/${works[1]?.title}`}>
-              <Image
-                className="w-full  object-left-top object-cover h-[313px] "
-                src={capstone}
-                alt="capstone homepage"
-              />
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Link href={`works/${works[1]?.title}`}>
-              <Image
-                className="w-full object-left-top object-cover h-[313px]"
-                src={capstone}
-                alt="capstone homepage"
-              />
-            </Link>
-          </SwiperSlide> */}
         </Swiper>
       </main>
+
       <Footer />
     </div>
   );
