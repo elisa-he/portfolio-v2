@@ -2,12 +2,9 @@
 import Header from "./components/header";
 import Footer from "./components/footer";
 import logo from "/public/eh.svg";
-import Image from "next/image";
 import Link from "next/link";
 import { josefin, mulish } from "./fonts";
 import about from "../json/about.json";
-import nurseImg from "/public/nurse.png";
-import computerImg from "/public/computer.png";
 import { motion } from "framer-motion";
 export default function Home() {
   const indoorHobby =
@@ -57,8 +54,8 @@ export default function Home() {
                 "firstRow opacity-0 noShow flex justify-center tablet:mt-80"
               }
             >
-              <Image
-                src={nurseImg}
+              <img
+                src="/Nurse.png"
                 className="w-1/2 max-w-xs max-h-60 object-contain "
                 alt="picture of a nurse"
               />
@@ -87,7 +84,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 h-1/2 max-w-xs object-contain my-auto mx-2.5">
-                <Image src={computerImg} alt="person on computer" />
+                <img src="/Computer.png" alt="person on computer" />
               </div>
             </motion.div>
           </section>

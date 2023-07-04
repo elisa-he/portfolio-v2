@@ -1,7 +1,4 @@
 "use client";
-
-import arrow from "public/Arrow.svg";
-import Image from "next/image";
 export default function Footer() {
   function scrollUp() {
     document.getElementById("logo").scrollIntoView({ behavior: "smooth" });

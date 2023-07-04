@@ -4,11 +4,7 @@ import Footer from "../components/footer";
 import { josefin, mulish } from "../fonts";
 import Link from "next/link";
 import logo from "/public/ehBlue.svg";
-import github from "/public/github.svg";
-import linkedin from "/public/linkedin.svg";
-import portrait from "/public/portrait.jpg";
 import contact from "/json/contact.json";
-import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -20,9 +16,9 @@ export default function Contact() {
           id="contact"
         >
           <div className="leftWrap mx-auto tablet:mx-16 max-h-[300px] max-w-[300px]">
-            <Image
+            <img
               className="rounded-full"
-              src={portrait}
+              src="/portrait.jpg"
               alt="portrait of me"
             />
           </div>
@@ -45,8 +41,8 @@ export default function Contact() {
                   className=""
                   target="_blank"
                 >
-                  <Image
-                    src={github}
+                  <img
+                    src="/github.svg"
                     className="tablet:w-24"
                     alt="github icon"
                   />
@@ -57,8 +53,8 @@ export default function Contact() {
                   href={contact && contact.socials[1]?.link}
                   target="_blank"
                 >
-                  <Image
-                    src={linkedin}
+                  <img
+                    src="/linkedin.svg"
                     className="tablet:w-24 "
                     alt="linkedin icon"
                   />
