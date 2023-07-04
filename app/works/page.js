@@ -70,18 +70,18 @@ export default function Works() {
               return (
                 <div key={i + 50} className="">
                   <SwiperSlide key={work.title} className="">
-                    <div className="h-[280px] relative  px-2">
+                    <div className="h-[280px] relative ">
                       <Link href={`works/${work?.title}`}>
                         <div className="mb-8 h-[280px] relative">
                           <Image
-                            className={`w-full object-left-top object-cover brightness-50 `}
+                            className={`w-full object-left-top object-cover  `}
                             src={work?.image}
                             fill
                             alt="homepage of websites"
                           />
                         </div>
                         <div className=" absolute bg-gray-50 py-8  w-full bottom-0 text-black ">
-                          <h3 className=" font-josefin text-lg uppercase  pl-1  ">
+                          <h3 className=" font-josefin text-lg uppercase w-full pl-1  ">
                             {work.title}
                           </h3>
 
