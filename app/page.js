@@ -76,10 +76,10 @@ export default function Home() {
                 </p>
                 <div className={`${josefin.className}`}>
                   <Link
-                    href={`/work`}
+                    href={`/works`}
                     className="workBtn tablet:text-xl text-sm mx-2.5 capitalize max-w-xs font-bold bg-black py-2 px-1 mt-2 text-white rounded-lg text-center w-full block"
                   >
-                    My Work
+                    My Works
                   </Link>
                 </div>
               </div>
