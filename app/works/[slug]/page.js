@@ -138,7 +138,7 @@ export default function Page({ params }) {
                             width={350}
                             height={400}
                             src={h.highlightImg}
-                            alt=""
+                            alt="highlights of website"
                           />
                           <p className="highlightDesc tablet:pl-8 pb-4 leading-8  font-bold">
                             {h.highlightDesc}

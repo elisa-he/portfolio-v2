@@ -77,7 +77,7 @@ export default function Works() {
                             className={`w-full object-left-top object-cover brightness-50 `}
                             src={work?.image}
                             fill
-                            alt="capstone homepage"
+                            alt="homepage of websites"
                           />
                         </div>
                         <div className=" absolute bg-gray-50 py-8  w-full bottom-0 text-black ">
