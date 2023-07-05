@@ -1,4 +1,3 @@
-"use client";
 import "./normalize.css";
 import "./globals.css";
 import { mulish, josefin } from "./fonts";
