@@ -2,7 +2,6 @@ import "./normalize.css";
 import "./globals.css";
 import { mulish, josefin } from "./fonts";
 import Navbar from "./components/navbar";
-import { useState } from "react";
 
 export const metadata = {
   title: "Elisa Codes",
